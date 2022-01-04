@@ -1,0 +1,13 @@
+import './src'
+
+my_lyrics = @LRCS::new('example.lrcs')
+
+my_lyrics_group = my_lyrics.spawn()
+
+my_lyrics_group.move(25, 25) // X 25 is optimal for 16:9 screens
+my_lyrics_group.lock_to_player(lock_x = true, lock_y = false)
+
+while_loop(() => true, (){
+    my_lyrics_group.move(0, 5,  1, BACK_IN_OUT)
+    my_lyrics_group.move(0, -5, 1, BACK_IN_OUT)
+})
