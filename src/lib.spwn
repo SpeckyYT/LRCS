@@ -3,9 +3,9 @@ extract obj_props
 type @LRCS
 impl @LRCS {
     new: #[
-        constructor
+        constructor,
         desc("Creates a new LRCS from the provided file")
-        example("@LRCS::new('file.lrcs')")        
+        example("@LRCS::new('file.lrcs')")
     ] (
         file: @string,
         distance: @number = 30*100
